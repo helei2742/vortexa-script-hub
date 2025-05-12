@@ -32,12 +32,12 @@ public class JarReleaseUploader {
 
     public static void main(String[] args)  {
         List<String> uploadJarDirs = List.of(
-//          ReleaseDict.optim_ai,
+          ReleaseDict.optim_ai
 //          ReleaseDict.stork,
 //          ReleaseDict.r2_money,
 //          ReleaseDict.enos,
 //          ReleaseDict.haha_wallet,
-          ReleaseDict.magic_newton
+//          ReleaseDict.magic_newton
         );
         for (String uploadJarDir : uploadJarDirs) {
             try {

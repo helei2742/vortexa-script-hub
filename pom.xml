@@ -4,12 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.com.vortexa</groupId>
-    <artifactId>vorrexa-script-hub</artifactId>
+    <groupId>cn.com.vortexa_script_hub</groupId>
+    <artifactId>vortexa-script-hub</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
         <module>depin/optim-ai</module>
+        <module>depin/stork</module>
+        <module>testnet/r2_money</module>
+        <module>testnet/selenium/magic_newton</module>
+        <module>testnet/selenium/enos</module>
+        <module>testnet/selenium/haha_wallet</module>
     </modules>
 
     <properties>

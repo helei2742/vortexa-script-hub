@@ -1,0 +1,11 @@
+vortexa:
+  web3:
+    chain-info:
+      - name: Plume_Testnet
+        chainType: ETH
+        rpcUrls:
+          - https://testnet-rpc.plumenetwork.xyz
+          - https://testnet-explorer.plumenetwork.xyz/
+        chainId: 98867
+        originTokenSymbol: PLUME
+        blockExploreUrl: https://testnet-explorer.plumenetwork.xyz

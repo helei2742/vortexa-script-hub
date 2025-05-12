@@ -1,0 +1,6 @@
+vortexa:
+  bot-meta-info:
+    botName: magic_newton
+    className: cn.com.vortexa_script_hub.testnet.selenium.magic_newton.MagicNewtonBot
+    extraClassNameList:
+      - cn.com.vortexa_script_hub.testnet.selenium.magic_newton.MinesweeperSolver

@@ -1,0 +1,5 @@
+vortexa:
+  bot-meta-info:
+    botName: enos_bot
+    versionCode: 1.0.0
+    className: cn.com.vortexa_script_hub.enos

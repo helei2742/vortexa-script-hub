@@ -1,6 +1,0 @@
-vortexa:
-  bot-meta-info:
-    botName: stork_bot
-    className: cn.com.vortexa_script_hub.depin.StorkBot
-    extraClassNameList:
-      - cn.com.vortexa_script_hub.depin.StorkBotAPI

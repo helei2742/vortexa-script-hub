@@ -1,0 +1,7 @@
+vortexa:
+  bot-meta-info:
+    botName: stork_bot
+    versionCode: 1.0.0
+    className: cn.com.vortexa_script_hub.stork.StorkBot
+    extraClassNameList:
+      - cn.com.vortexa_script_hub.stork.StorkBotAPI

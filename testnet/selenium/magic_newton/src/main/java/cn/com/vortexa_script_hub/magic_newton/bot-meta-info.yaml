@@ -1,0 +1,7 @@
+vortexa:
+  bot-meta-info:
+    botName: magic_newton
+    versionCode: 1.0.0
+    className: cn.com.vortexa_script_hub.magic_newton.MagicNewtonBot
+    extraClassNameList:
+      - cn.com.vortexa_script_hub.magic_newton.MinesweeperSolver

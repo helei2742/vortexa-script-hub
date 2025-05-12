@@ -1,0 +1,7 @@
+vortexa:
+  bot-meta-info:
+    botName: haha_selenium_bot
+    versionCode: 1.0.0
+    className: cn.com.vortexa_script_hub.haha_wallet.HaHaWalletBot
+    extraClassNameList:
+      - cn.com.vortexa_script_hub.haha_wallet.HahaWalletSelenium

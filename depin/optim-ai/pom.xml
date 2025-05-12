@@ -10,7 +10,7 @@
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>optim-ai</artifactId>
+    <artifactId>optim_ai</artifactId>
     <version>1.0.0</version>
 
     <properties>

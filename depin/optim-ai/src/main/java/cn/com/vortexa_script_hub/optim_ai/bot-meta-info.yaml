@@ -1,0 +1,12 @@
+vortexa:
+  bot-meta-info:
+    botName: optim_ai
+    versionCode: 1.0.0
+    className: cn.com.vortexa_script_hub.optimai.OptimAIBot
+    extraClassNameList:
+      - cn.com.vortexa_script_hub.optimai.OptimAIAPI
+    jobParams:
+      - jobName: registry
+        concurrentCount: 10
+      - jobName: login
+        concurrentCount: 20

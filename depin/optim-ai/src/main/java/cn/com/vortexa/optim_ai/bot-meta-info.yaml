@@ -1,0 +1,11 @@
+vortexa:
+  bot-meta-info:
+    botName: optim_ai
+    className: cn.com.vortexa.script_bot.depin.optimai.OptimAIBot
+    extraClassNameList:
+      - cn.com.vortexa.script_bot.depin.optimai.OptimAIAPI
+    jobParams:
+      - jobName: registry
+        concurrentCount: 10
+      - jobName: login
+        concurrentCount: 20

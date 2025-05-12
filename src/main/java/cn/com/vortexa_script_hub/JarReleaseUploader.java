@@ -7,6 +7,7 @@ import okhttp3.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
 import java.util.regex.*;
 
@@ -15,7 +16,6 @@ public class JarReleaseUploader {
     private static final String OWNER = "helei2742";
     private static final String REPO = "vortexa-script-hub";
     private static final String TOKEN;
-    private static final File JAR_DIR = new File("/Users/helei/develop/ideaworkspace/vortexa-script-hub/testnet/selenium/magic_newton/target");
 
     private static final OkHttpClient client = new OkHttpClient();
     private static final ObjectMapper mapper = new ObjectMapper();
@@ -30,9 +30,32 @@ public class JarReleaseUploader {
         }
     }
 
-    public static void main(String[] args) throws Exception {
-        File[] files = JAR_DIR.listFiles((dir, name) -> name.endsWith(".jar"));
-        if (files == null) return;
+    public static void main(String[] args)  {
+        List<String> uploadJarDirs = List.of(
+//          ReleaseDict.optim_ai,
+//          ReleaseDict.stork,
+//          ReleaseDict.r2_money,
+//          ReleaseDict.enos,
+//          ReleaseDict.haha_wallet,
+          ReleaseDict.magic_newton
+        );
+        for (String uploadJarDir : uploadJarDirs) {
+            try {
+                System.out.println("start upload " + uploadJarDir);
+                uploadJarRelease(new File(uploadJarDir));
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
+    private static void uploadJarRelease(File jarDir) throws IOException {
+        File[] files = jarDir.listFiles((dir, name) -> name.endsWith(".jar"));
+
+        if (files == null) {
+            System.out.println("no jar file, " + jarDir.getAbsolutePath());
+            return;
+        }
 
         for (File jar : files) {
             String fileName = jar.getName();

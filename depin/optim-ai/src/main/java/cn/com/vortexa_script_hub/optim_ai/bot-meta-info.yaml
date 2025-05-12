@@ -1,6 +1,6 @@
 vortexa:
   bot-meta-info:
-    botName: optim_ai
+    botName: optim-ai
     versionCode: 1.0.0
     className: cn.com.vortexa_script_hub.optimai.OptimAIBot
     extraClassNameList:

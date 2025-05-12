@@ -1,18 +1,18 @@
 {
   "assertsList": [
     {
-      "botName": "optim_ai",
-      "downloadUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/optim_ai-1.0.0/optim_ai-1.0.0.jar",
+      "botName": "optim-ai",
+      "downloadUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/optim-ai-1.0.0/optim-ai-1.0.0.jar",
       "version": "1.0.0"
     },
     {
-      "botName": "stork_bot",
-      "downloadUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/stork_bot-1.0.0/stork_bot-1.0.0.jar",
+      "botName": "stork",
+      "downloadUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/stork-1.0.0/stork-1.0.0.jar",
       "version": "1.0.0"
     },
     {
-      "botName": "enos_bot",
-      "downloadUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/enos_bot-1.0.0/enos_bot-1.0.0.jar",
+      "botName": "enos",
+      "downloadUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/enos-1.0.0/enos-1.0.0.jar",
       "version": "1.0.0"
     },
     {
@@ -21,13 +21,13 @@
       "version": "1.0.0"
     },
     {
-      "botName": "haha_selenium_bot",
-      "downloadUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/haha_selenium_bot-1.0.0/haha_selenium_bot-1.0.0.jar",
+      "botName": "haha_wallet",
+      "downloadUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/haha_wallet-1.0.0/haha_wallet-1.0.0.jar",
       "version": "1.0.0"
     },
     {
-      "botName": "R2_Money_Bot",
-      "downloadUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/R2_Money_Bot-1.0.0/R2_Money_Bot-1.0.0.jar",
+      "botName": "r2_money",
+      "downloadUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/r2_money-1.0.0/r2_money-1.0.0.jar",
       "version": "1.0.0"
     }
   ]

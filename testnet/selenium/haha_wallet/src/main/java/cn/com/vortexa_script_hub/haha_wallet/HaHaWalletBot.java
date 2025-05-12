@@ -40,7 +40,8 @@ public class HaHaWalletBot extends AutoLaunchBot<HaHaWalletBot> {
 
         String resourceDir = botConfig.getMetaInfo().getResourceDir();
         HahaWalletSelenium.HAHA_WALLET_EXTENSION_CRX_PATH = resourceDir + File.separator + "HaHa-Wallet-Chrome-Web-Store.crx";
-        HahaWalletSelenium.CHROME_DRIVER_PATH = resourceDir + File.separator + "chromedriver";
+        Object chromeDriverPath = botConfig.getCustomConfig().get("chrome_driver_path");
+        HahaWalletSelenium.CHROME_DRIVER_PATH = chromeDriverPath == null ? "" : chromeDriverPath.toString() ;
     }
 
     @Override

@@ -40,7 +40,10 @@ public class IndexJsonBuilder {
         for (String scanDirName : scanDirNames) {
             Path botInstanceConfigPath = Paths.get(baseDir, scanDirName);
             try (Stream<Path> walk = Files.walk(botInstanceConfigPath, 20)) {
-                walk.filter(p -> Files.isRegularFile(p) && p.toString().endsWith(metaInfoFIleName)).forEach(configFile -> {
+                walk.filter(p -> Files.isRegularFile(p)
+                        && p.toString().endsWith(metaInfoFIleName)
+                        && !p.toString().contains(File.separator + "target" + File.separator)
+                ).forEach(configFile -> {
                     try {
                         BotMetaInfo metaInfo = YamlConfigLoadUtil.load(configFile.toFile(),
                                 BOT_META_INFO_PREFIX, BotMetaInfo.class);

@@ -31,7 +31,7 @@ public class JarReleaseUploader {
     }
 
     public static void main(String[] args)  {
-        List<String> uploadJarDirs = List.of(
+        List<List<String>> uploadJarDirs = List.of(
           ReleaseDict.optim_ai
 //          ReleaseDict.stork,
 //          ReleaseDict.r2_money,
@@ -39,21 +39,25 @@ public class JarReleaseUploader {
 //          ReleaseDict.haha_wallet,
 //          ReleaseDict.magic_newton
         );
-        for (String uploadJarDir : uploadJarDirs) {
+        for (List<String> contentPaths : uploadJarDirs) {
             try {
+                String uploadJarDir = ReleaseDict.buildLocalTargetPath(contentPaths);
                 System.out.println("start upload " + uploadJarDir);
-                uploadJarRelease(new File(uploadJarDir));
+                uploadJarRelease(contentPaths, new File(uploadJarDir));
             } catch (IOException e) {
                 System.out.println(e.getMessage());
             }
         }
     }
 
-    private static void uploadJarRelease(File jarDir) throws IOException {
+    private static void uploadJarRelease(List<String> contentPaths, File jarDir) throws IOException {
         File[] files = jarDir.listFiles((dir, name) -> name.endsWith(".jar"));
+        File iconFile = new File(jarDir.getAbsolutePath() + File.separator + "classes" + File.separator
+                + contentPaths.getLast()
+                .replace("-", "_") + File.separator + "icon.png");
 
         if (files == null) {
-            System.out.println("no jar file, " + jarDir.getAbsolutePath());
+            System.out.println("no jar file, " + jarDir);
             return;
         }
 
@@ -70,6 +74,9 @@ public class JarReleaseUploader {
 
             String releaseId = getOrCreateRelease(tag, name);
             uploadAsset(releaseId, jar);
+            if (iconFile.exists()) {
+                uploadAsset(releaseId, iconFile);
+            }
         }
     }
 

@@ -3,31 +3,37 @@
     {
       "botName": "optim-ai",
       "downloadUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/optim-ai-1.0.0/optim-ai-1.0.0.jar",
+      "iconUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/optim-ai-1.0.0/icon.png",
       "version": "1.0.0"
     },
     {
       "botName": "stork",
       "downloadUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/stork-1.0.0/stork-1.0.0.jar",
+      "iconUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/stork-1.0.0/icon.png",
       "version": "1.0.0"
     },
     {
       "botName": "enos",
       "downloadUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/enos-1.0.0/enos-1.0.0.jar",
+      "iconUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/enos-1.0.0/icon.png",
       "version": "1.0.0"
     },
     {
       "botName": "magic_newton",
       "downloadUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/magic_newton-1.0.0/magic_newton-1.0.0.jar",
+      "iconUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/magic_newton-1.0.0/icon.png",
       "version": "1.0.0"
     },
     {
       "botName": "haha_wallet",
       "downloadUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/haha_wallet-1.0.0/haha_wallet-1.0.0.jar",
+      "iconUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/haha_wallet-1.0.0/icon.png",
       "version": "1.0.0"
     },
     {
       "botName": "r2_money",
       "downloadUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/r2_money-1.0.0/r2_money-1.0.0.jar",
+      "iconUrl": "https://github.com/helei2742/vortexa-script-hub/releases/download/r2_money-1.0.0/icon.png",
       "version": "1.0.0"
     }
   ]

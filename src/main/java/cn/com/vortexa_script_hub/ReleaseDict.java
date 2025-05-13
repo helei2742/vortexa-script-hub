@@ -11,12 +11,12 @@ import java.util.List;
 public class ReleaseDict {
     private static final String BASE_PATH = System.getProperty("user.dir");
 
-    public static final String optim_ai = buildLocalTargetPath(List.of("depin", "optim-ai"));
-    public static final String stork = buildLocalTargetPath(List.of("depin", "stork"));
-    public static final String r2_money = buildLocalTargetPath(List.of("testnet", "r2_money"));
-    public static final String enos = buildLocalTargetPath(List.of("testnet", "selenium", "enos"));
-    public static final String haha_wallet = buildLocalTargetPath(List.of("testnet", "selenium", "haha_wallet"));
-    public static final String magic_newton = buildLocalTargetPath(List.of("testnet", "selenium", "magic_newton"));
+    public static final List<String> optim_ai = List.of("depin", "optim-ai");
+    public static final List<String> stork = List.of("depin", "stork");
+    public static final List<String> r2_money = List.of("testnet", "r2_money");
+    public static final List<String> enos = List.of("testnet", "selenium", "enos");
+    public static final List<String> haha_wallet = List.of("testnet", "selenium", "haha_wallet");
+    public static final List<String> magic_newton = List.of("testnet", "selenium", "magic_newton");
 
 
     public static String buildLocalTargetPath(List<String> prefix) {

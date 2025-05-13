@@ -60,10 +60,13 @@ public class IndexJsonBuilder {
                         String jarName = VersionUtil.getBotJarFileName(botName, versionCode);
                         String jarGitHubDownLoadPath = reposUrl +
                                 "/releases/download/" + botName + "-" + versionCode + "/" + jarName;
-                        RemoteBotAsserts.Asserts asserts = new RemoteBotAsserts.Asserts();
+                        String iconDownloadPath = reposUrl +
+                                "/releases/download/" + botName + "-" + versionCode + "/icon.png";
+                                RemoteBotAsserts.Asserts asserts = new RemoteBotAsserts.Asserts();
                         asserts.setBotName(botName);
                         asserts.setVersion(versionCode);
                         asserts.setDownloadUrl(jarGitHubDownLoadPath);
+                        asserts.setIconUrl(iconDownloadPath);
                         System.out.printf("[%s]-[%s] add into asserts%n", botName, versionCode);
                         list.add(asserts);
                     } catch (Exception e) {

@@ -2,8 +2,8 @@ vortexa:
   bot-meta-info:
     botName: r2_money
     versionCode: 1.0.0
-    className: cn.com.vortexa_script_hub.testnet.r2money.R2MoneyBot
+    className: cn.com.vortexa_script_hub.r2money.R2MoneyBot
     extraClassNameList:
       - cn.com.vortexa_script_hub.r2money.R2MoneyApi
-      - cn.com.vortexa.script_bot.r2money.R2PlumeAndSepoliaTestnetApi
-      - cn.com.vortexa.script_bot.r2money.R2Balance
+      - cn.com.vortexa_script_hub.r2money.R2PlumeAndSepoliaTestnetApi
+      - cn.com.vortexa_script_hub.r2money.R2Balance

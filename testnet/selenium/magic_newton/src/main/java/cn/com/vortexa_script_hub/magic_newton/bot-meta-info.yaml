@@ -5,3 +5,14 @@ vortexa:
     className: cn.com.vortexa_script_hub.magic_newton.MagicNewtonBot
     extraClassNameList:
       - cn.com.vortexa_script_hub.magic_newton.MinesweeperSolver
+    introduce:
+      description: magic newton bot
+      officialLink:
+      twitterLink:
+      guide:
+      financing:
+      botConfig:
+      accountConfig:
+      tag:
+        - TESTNET
+        - BASE

@@ -5,3 +5,14 @@ vortexa:
     className: cn.com.vortexa_script_hub.stork.StorkBot
     extraClassNameList:
       - cn.com.vortexa_script_hub.stork.StorkBotAPI
+    introduce:
+      description: stork bot
+      officialLink:
+      twitterLink:
+      guide:
+      financing:
+      accountConfig:
+        password: registry/login account password
+      tag:
+        - DEPIN
+        - SOL

@@ -14,7 +14,7 @@ import java.util.List;
 
 
 
-@BotApplication(name = "stork_bot", accountParams = MapConfigKey.PASSWORD_KEY)
+@BotApplication(accountParams = MapConfigKey.PASSWORD_KEY)
 public class StorkBot extends AutoLaunchBot<StorkBot> {
 
     private StorkBotAPI storkBotAPI;

@@ -27,7 +27,6 @@ import java.util.concurrent.ThreadLocalRandom;
  * @since 2025-04-24
  */
 @BotApplication(
-        name = "R2_Money_Bot",
         configParams = {
                 MapConfigKey.MAX_USE_PERCENT_KEY, MapConfigKey.MIN_USE_PERCENT_KEY
         }

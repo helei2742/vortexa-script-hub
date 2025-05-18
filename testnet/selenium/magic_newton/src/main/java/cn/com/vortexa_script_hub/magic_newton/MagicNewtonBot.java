@@ -28,9 +28,7 @@ import java.util.regex.Pattern;
  * @since 2025-04-05
  */
 @Slf4j
-@BotApplication(
-        name = "magic_newton_v2"
-)
+@BotApplication()
 public class MagicNewtonBot extends FingerBrowserBot {
 
     public static final String TARGET_SITE_URL = "https://www.magicnewton.com/portal/rewards";

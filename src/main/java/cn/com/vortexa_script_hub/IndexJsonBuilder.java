@@ -31,7 +31,7 @@ public class IndexJsonBuilder {
     );
     private static final String baseDir = System.getProperty("user.dir");
 
-    private static final String metaInfoFIleName = "bot-meta-info.yaml";
+    public static final String metaInfoFIleName = "bot-meta-info.yaml";
 
     private static final String reposUrl = "https://github.com/helei2742/vortexa-script-hub";
 

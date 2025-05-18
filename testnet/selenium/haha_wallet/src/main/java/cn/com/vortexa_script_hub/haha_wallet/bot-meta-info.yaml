@@ -5,3 +5,11 @@ vortexa:
     className: cn.com.vortexa_script_hub.haha_wallet.HaHaWalletBot
     extraClassNameList:
       - cn.com.vortexa_script_hub.haha_wallet.HahaWalletSelenium
+    introduce:
+      description: haha wallet bot
+      officialLink:
+      twitterLink:
+      guide:
+      financing:
+      tag:
+        - WALLET

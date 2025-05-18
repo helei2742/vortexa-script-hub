@@ -17,7 +17,7 @@ import java.util.List;
  * @author helei
  * @since 2025/3/24 17:14
  */
-@BotApplication(name = "optim_ai", configParams = {OptimAIBot.TWO_CAPTCHA_API_KEY})
+@BotApplication(configParams = {OptimAIBot.TWO_CAPTCHA_API_KEY})
 public class OptimAIBot extends AutoLaunchBot<OptimAIBot> {
 
     public static final String TWO_CAPTCHA_API_KEY = "two_captcha_api_key";

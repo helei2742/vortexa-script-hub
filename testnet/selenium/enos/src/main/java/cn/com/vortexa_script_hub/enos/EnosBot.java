@@ -28,9 +28,7 @@ import java.util.concurrent.TimeUnit;
  * @since 2025-05-07
  */
 @Slf4j
-@BotApplication(
-        name = "enos_bot"
-)
+@BotApplication()
 public class EnosBot extends FingerBrowserBot {
     private static final String MAIN_PAGE_URL = "https://speedrun.enso.build/";
 

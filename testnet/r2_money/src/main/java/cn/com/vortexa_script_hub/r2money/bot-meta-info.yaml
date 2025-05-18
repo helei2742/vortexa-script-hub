@@ -7,3 +7,15 @@ vortexa:
       - cn.com.vortexa_script_hub.r2money.R2MoneyApi
       - cn.com.vortexa_script_hub.r2money.R2PlumeAndSepoliaTestnetApi
       - cn.com.vortexa_script_hub.r2money.R2Balance
+      -
+    introduce:
+      description: r2 plume test net bot
+      officialLink:
+      twitterLink:
+      guide:
+      financing:
+      botConfig:
+        max_use_percent: 单次交易最大使用百分比
+        min_use_percent: 单次交易最小使用百分比
+      tag:
+        - TESTNET

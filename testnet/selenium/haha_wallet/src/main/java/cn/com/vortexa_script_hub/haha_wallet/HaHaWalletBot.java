@@ -18,10 +18,7 @@ import java.util.List;
 
 
 @Slf4j
-@BotApplication(
-        name = "haha_selenium_bot",
-        accountParams = {HaHaWalletBot.WALLET_KEY}
-)
+@BotApplication(accountParams = {HaHaWalletBot.WALLET_KEY})
 public class HaHaWalletBot extends AutoLaunchBot<HaHaWalletBot> {
 
     public static final String WALLET_KEY = "haha_wallet";

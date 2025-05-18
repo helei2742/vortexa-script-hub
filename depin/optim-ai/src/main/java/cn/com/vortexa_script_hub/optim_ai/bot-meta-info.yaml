@@ -10,3 +10,17 @@ vortexa:
         concurrentCount: 10
       - jobName: login
         concurrentCount: 20
+
+    introduce:
+      description: optim ai bot
+      officialLink: https://optimai.network/
+      twitterLink: https://x.com/OptimaiNetwork
+      guide: https://chromewebstore.google.com/detail/njlfcjdojmopagogfpjgcbnpmiknapnd
+      financing:
+      botConfig:
+        two_captcha_api_key: 2captcha apikey
+      accountConfig:
+        password: registry/login account password
+      tag:
+        - DEPIN
+        - SOL

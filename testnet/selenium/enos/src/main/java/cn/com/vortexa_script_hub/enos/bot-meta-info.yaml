@@ -3,3 +3,14 @@ vortexa:
     botName: enos
     versionCode: 1.0.0
     className: cn.com.vortexa_script_hub.enos.EnosBot
+
+    introduce:
+      description: enos testnet bot
+      officialLink:
+      twitterLink:
+      guide:
+      financing:
+      botConfig:
+      accountConfig:
+      tag:
+        - TESTNET

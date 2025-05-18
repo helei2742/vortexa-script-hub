@@ -1,5 +1,9 @@
 package cn.com.vortexa_script_hub;
 
+import cn.com.vortexa.common.dto.IntroduceMD;
+import cn.com.vortexa.common.util.IntroduceMDBuilder;
+import cn.com.vortexa.common.util.YamlConfigLoadUtil;
+import com.alibaba.fastjson.JSONObject;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.*;
@@ -10,6 +14,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 import java.util.regex.*;
+
+import static cn.com.vortexa.common.util.JarFileResolveUtil.BOT_META_INF_FILE_NAME;
 
 public class JarReleaseUploader {
 
@@ -33,7 +39,7 @@ public class JarReleaseUploader {
     public static void main(String[] args)  {
         List<List<String>> uploadJarDirs = List.of(
 //          ReleaseDict.optim_ai
-//          ReleaseDict.stork,
+          ReleaseDict.stork,
           ReleaseDict.r2_money,
           ReleaseDict.enos,
           ReleaseDict.haha_wallet,
@@ -55,10 +61,20 @@ public class JarReleaseUploader {
         File iconFile = new File(jarDir.getAbsolutePath() + File.separator + "classes" + File.separator
                 + contentPaths.getLast()
                 .replace("-", "_") + File.separator + "icon.png");
+        File introduceFile = new File(jarDir.getAbsolutePath() + File.separator + "classes" + File.separator
+                + contentPaths.getLast()
+                .replace("-", "_") + File.separator + BOT_META_INF_FILE_NAME);
 
         if (files == null) {
             System.out.println("no jar file, " + jarDir);
             return;
+        }
+
+        IntroduceMD introduceMD;
+        if (introduceFile.exists()) {
+            introduceMD = YamlConfigLoadUtil.load(introduceFile, List.of("vortexa","botMetaInfo", "introduce"), IntroduceMD.class);
+        } else {
+            introduceMD = new IntroduceMD();
         }
 
         for (File jar : files) {
@@ -70,9 +86,11 @@ public class JarReleaseUploader {
             String version = parsed[1];
             String tag = name + "-" + version;
 
-            System.out.println("处理：" + fileName + " -> tag: " + tag);
+            introduceMD.setBotName(name);
+            introduceMD.setBotVersion(version);
 
-            String releaseId = getOrCreateRelease(tag, name);
+            System.out.println("处理：" + fileName + " -> tag: " + tag);
+            String releaseId = getOrCreateRelease(tag, IntroduceMDBuilder.build(introduceMD));
             uploadAsset(releaseId, jar);
             if (iconFile.exists()) {
                 uploadAsset(releaseId, iconFile);
@@ -89,7 +107,7 @@ public class JarReleaseUploader {
         return null;
     }
 
-    private static String getOrCreateRelease(String tag, String name) throws IOException {
+    private static String getOrCreateRelease(String tag, String introduce) throws IOException {
         Request getRelease = new Request.Builder()
                 .url("https://api.github.com/repos/" + OWNER + "/" + REPO + "/releases/tags/" + tag)
                 .header("Authorization", "token " + TOKEN)
@@ -102,14 +120,15 @@ public class JarReleaseUploader {
             }
         }
 
+        JSONObject body = new JSONObject();
+        body.put("tag_name", tag);
+        body.put("name", tag);
+        body.put("body", introduce);
+        body.put("draft", false);
+        body.put("prerelease", false);
+
         // 创建 release
-        String bodyJson = "{\n" +
-                "  \"tag_name\": \"" + tag + "\",\n" +
-                "  \"name\": \"" + tag + "\",\n" +
-                "  \"body\": \"自动发布: " + name + "\",\n" +
-                "  \"draft\": false,\n" +
-                "  \"prerelease\": false\n" +
-                "}";
+        String bodyJson = JSONObject.toJSONString(body);
 
         System.out.println(tag);
         Request create = new Request.Builder()
